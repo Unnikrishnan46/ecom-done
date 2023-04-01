@@ -1,0 +1,506 @@
+<style>
+    @media (min-width: 500px) {
+        .h-custom {
+            height: 100vh !important;
+        }
+    }
+
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+        font-size: 1rem;
+        line-height: 2.15;
+        padding-left: .75em;
+        padding-right: .75em;
+    }
+
+    .card-registration .select-arrow {
+        top: 13px;
+    }
+
+    .bg-grey {
+        background-color: #eae8e8;
+    }
+
+    @media (min-width: 992px) {
+        .card-registration-2 .bg-grey {
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .card-registration-2 .bg-grey {
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+    }
+
+    @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+
+
+    .mt-100 {
+        margin-top: 100px;
+
+    }
+
+
+    .card {
+        margin-bottom: 30px;
+        border: 0;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        letter-spacing: .5px;
+        border-radius: 8px;
+        -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+        box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    }
+
+    .card .card-header {
+        background-color: #fff;
+        border-bottom: none;
+        padding: 24px;
+        border-bottom: 1px solid #f6f7fb;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .card-header:first-child {
+        border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    }
+
+
+
+    .card .card-body {
+        padding: 30px;
+        background-color: transparent;
+    }
+
+    .btn-primary,
+    .btn-primary.disabled,
+    .btn-primary:disabled {
+        background-color: #4466f2 !important;
+        border-color: #4466f2 !important;
+    }
+
+
+
+    .footer {
+        background-color: #282c34;
+        width: 100%;
+        text-align: left;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 50px;
+    }
+
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+
+    /* footer left*/
+
+    .footer .footer-left {
+        width: 33%;
+        padding-right: 15px;
+    }
+
+    .footer .about {
+        line-height: 20px;
+        color: white;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .footer .about span {
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .footer .icons {
+        margin-top: 25px;
+    }
+
+    .footer .icons a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color: #33383b;
+        border-radius: 2px;
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+
+
+    /* footer center*/
+
+    .footer .footer-center {
+        width: 30%;
+    }
+
+    .footer .footer-center i {
+        background-color: #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+
+    .footer .footer-center i.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+    }
+
+    .footer .footer-center p {
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .footer .footer-center p span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .footer .footer-center p a {
+        color: #0099ff;
+        text-decoration: none;
+    }
+
+
+    /* footer right*/
+
+    .footer .footer-right {
+        width: 35%;
+    }
+
+    .footer h2 {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .footer h2 span {
+        color: #0099ff;
+    }
+
+    .footer .menu {
+        color: #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+    }
+
+    .footer .menu a {
+        display: inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .footer .menu a:hover {
+        color: #0099ff;
+    }
+
+    .footer .name {
+        color: #0099ff;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    @media (max-width: 767px) {
+        .footer {
+            font-size: 14px;
+        }
+
+        .footer .footer-left,
+        .footer .footer-center,
+        .footer .footer-right {
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .footer .footer-center i {
+            margin-left: 0;
+        }
+    }
+</style>
+
+
+
+
+
+
+
+<section class="h-100 h-custom" style="background-color: #d2c9ff;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-lg-8">
+                                <div class="p-5">
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+
+                                    </div>
+                                    {{#if cartempty}}
+                                    <div class="container-fluid  mt-100">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-body cart">
+                                                        <div class="col-sm-12 empty-cart-cls text-center">
+                                                            <img src="https://i.imgur.com/dCdflKN.png" width="130"
+                                                                height="130" class="img-fluid mb-4 mr-3">
+                                                            <h3><strong>Your Cart is Empty</strong></h3>
+                                                            <h4>Add something to make me happy</h4>
+                                                            <a href="/products"
+                                                                class="btn btn-primary cart-btn-transform m-3"
+                                                                data-abc="true">continue shopping</a>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    {{/if}}
+                                    {{#each cart}}
+                                    <hr class="my-4">
+
+                                    <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                            <img src="/product-images/{{this.id}}.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                            <h6 class="text-muted">{{this.name}}</h6>
+                                            <h6 class="text-black mb-0">Cotton T-shirt</h6>
+                                        </div>
+                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                            <button class="btn btn-link px-2"
+                                                onclick="changeQuantity('{{this.price}}','{{this._id}}','{{this._id}}',-1)">
+                                                <i class="bi bi-dash-circle-fill"></i>
+
+
+                                            </button>
+
+                                            <span id="{{this._id}}">{{this.quantity}}</span>
+                                            {{!-- <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                class="form-control form-control-sm" /> --}}
+
+                                            <button class="btn btn-link px-2"
+                                                onclick="changeQuantity('{{this.price}}','{{this._id}}','{{this._id}}',1)">
+                                                <i class="bi bi-plus-circle-fill"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                            <h6 class="mb-0">${{this.price}}</h6>
+                                        </div>
+
+
+                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                            <a data-bs-toggle="modal" data-bs-target="#ModelBlock{{this._id}}"
+                                                class="btn btn-danger ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="white" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                                </svg>
+                                                {{!-- <i class="bi bi-trash3-fill"></i> --}}
+                                            </a>
+
+
+
+                                            <div class="modal fade" id="ModelBlock{{this._id}}" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title text-danger" id="exampleModalLabel">
+                                                                Are you sure
+                                                                to remove {{this.name}} from your cart ?
+                                                            </h5>
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <a href="/remove-product/?cartId={{this.id}}" type="button"
+                                                                class="btn btn-danger">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+
+                                    {{!-- <div class="pt-5">
+                                        <h6 class="mb-0"><a href="#!" class="text-body"><i
+                                                    class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="col-lg-4 bg-grey">
+                                <div class="p-5">
+                                    <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <h5 class="text-uppercase">items</h5>
+                                        <h5><span id="subtotal">{{totalValue}}</span></h5>
+                                    </div>
+
+                                    <h5 class="text-uppercase mb-3">Shipping</h5>
+                                    <h5>Free</h5>
+                                    <div class="mb-4 pb-2">
+                                    </div>
+
+
+
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-5">
+                                        <h5 class="text-uppercase">Total price</h5>
+                                        <h5>$<span id="total">{{totalValue}}</span></h5>
+                                    </div>
+                                    {{!-- <form id="checkout-form" action="" method="">
+                                        <div style="padding-bottom: 10;">
+                                            <input name="totalValue" type="text" value={{totalValue}} hidden>
+                                            <h6 class="mb-4">Select payment method</h6>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="payment_method"
+                                                    id="flexRadioDefault1" value="razorpay" checked>
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Razorpay
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-5">
+                                                <input class="form-check-input" type="radio" name="payment_method"
+                                                    id="flexRadioDefault2" value="paypal">
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Paypal
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </form> --}}
+                                    <a href="/place-order?totalValue={{totalValue}}"><button type="submit" class="btn btn-dark btn-block btn-lg">Proceed to
+                                            check
+                                            Out</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer start -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                   <div class="full">
+                      <div class="logo_footer">
+                        <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
+                      </div>
+                      <div class="information_f">
+                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
+                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
+                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                      </div>
+                   </div>
+               </div>
+               <div class="col-md-8">
+                  <div class="row">
+                  <div class="col-md-7">
+                     <div class="row">
+                        <div class="col-md-6">
+                     <div class="widget_menu">
+                        <h3>Menu</h3>
+                        <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Testimonial</a></li>
+                           <li><a href="#">Blog</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="widget_menu">
+                        <h3>Account</h3>
+                        <ul>
+                           <li><a href="#">Account</a></li>
+                           <li><a href="#">Checkout</a></li>
+                           <li><a href="#">Login</a></li>
+                           <li><a href="#">Register</a></li>
+                           <li><a href="#">Shopping</a></li>
+                           <li><a href="#">Widget</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                     </div>
+                  </div>     
+                  <div class="col-md-5">
+                     <div class="widget_menu">
+                        <h3>Newsletter</h3>
+                        <div class="information_f">
+                          <p>Subscribe by our newsletter and get update protidin.</p>
+                        </div>
+                        <div class="form_sub">
+                           <form>
+                              <fieldset>
+                                 <div class="field">
+                                    <input type="email" placeholder="Enter Your Mail" name="email" />
+                                    <input type="submit" value="Subscribe" />
+                                 </div>
+                              </fieldset>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- footer end -->

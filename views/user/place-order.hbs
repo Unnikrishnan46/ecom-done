@@ -1,0 +1,623 @@
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+    .container-suiii {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px;
+    }
+
+    @media (max-width: 768px) {
+        .container-suiii {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container-suiii {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0px;
+        margin-top: 25px;
+        text-align: center;
+        font-weight: 200;
+        font-size: 19px;
+        font-size: 1.2rem;
+    }
+
+    .dropdown-select.visible {
+        display: block;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        list-style: none;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    ul li:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-select {
+        position: absolute;
+        background: #77aaee;
+        text-align: left;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 90%;
+        left: 2px;
+        line-height: 2em;
+        margin-top: 2px;
+        box-sizing: border-box;
+    }
+
+    .thin {
+        font-weight: 400;
+    }
+
+    .small {
+        font-size: 12px;
+        font-size: .8rem;
+    }
+
+    .half-input-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .half-input-table td:first-of-type {
+        border-right: 10px solid #4488dd;
+        width: 50%;
+    }
+
+    .window {
+        min-height: 700px;
+        background: #fff;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        z-index: 10;
+    }
+
+    .order-info {
+        padding-bottom: 133px;
+        height: 100%;
+        width: 50%;
+        padding-left: 25px;
+        padding-right: 25px;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .price {
+        bottom: 0px;
+        position: absolute;
+        right: 0px;
+        color: #4488dd;
+    }
+
+    .order-table td:first-of-type {
+        width: 25%;
+    }
+
+    .order-table {
+        position: relative;
+    }
+
+    .line {
+        height: 1px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: #ddd;
+    }
+
+    .order-table td:last-of-type {
+        vertical-align: top;
+        padding-left: 25px;
+    }
+
+    .order-info-content {
+        table-layout: fixed;
+
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .pay-btn {
+        border: none;
+        background: #22b877;
+        line-height: 2em;
+        border-radius: 10px;
+        font-size: 19px;
+        font-size: 1.2rem;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        bottom: 25px;
+        width: calc(100% - 50px);
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+
+    .pay-btn:hover {
+        background: #22a877;
+        color: #eee;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+
+    .total {
+        margin-top: 25px;
+        font-size: 20px;
+        font-size: 1.3rem;
+        position: absolute;
+        bottom: 30px;
+        right: 27px;
+        left: 35px;
+    }
+
+    .dense {
+        line-height: 1.2em;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .input-field {
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+        margin-top: 3px;
+        line-height: 1.5em;
+        font-size: 20px;
+        font-size: 1.3rem;
+        border: none;
+        padding: 5px 10px 5px 10px;
+        color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .credit-info {
+        background: #4488dd;
+        height: 100%;
+        width: 50%;
+        color: #eee;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 14px;
+        font-size: .9rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        box-sizing: border-box;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: relative;
+    }
+
+    .dropdown-btn {
+        background: rgba(255, 255, 255, 0.1);
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 1.5em;
+        cursor: pointer;
+        position: relative;
+        -webkit-transition: background .2s ease;
+        transition: background .2s ease;
+    }
+
+    .dropdown-btn:after {
+        content: '\25BE';
+        right: 8px;
+        position: absolute;
+    }
+
+    .dropdown-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-transition: background .2s ease;
+        transition: background .2s ease;
+    }
+
+    .dropdown-select {
+        display: none;
+    }
+
+    .credit-card-image {
+        display: block;
+        max-height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    .credit-info-content {
+        margin-top: 25px;
+        -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        .window {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 0px;
+        }
+
+        .order-info {
+
+            width: 100%;
+            height: auto;
+            padding-bottom: 100px;
+            border-radius: 0px;
+        }
+
+        .credit-info {
+            width: 100%;
+            height: auto;
+            padding-bottom: 100px;
+            border-radius: 0px;
+        }
+
+        .pay-btn {
+            border-radius: 0px;
+        }
+    }
+</style>
+
+<div class='container-suiii'>
+    <div class='window'>
+        <div class='order-info'>
+            <div class='order-info-content'>
+                <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Order Summary
+                </h2>
+                <div class='line'></div>
+                {{#if cart}}
+                {{#each cart}}
+                <table class='order-table'>
+                    <tbody>
+                        <tr>
+                            <td><img src="/product-images/{{this._id}}.jpg" class='full-width'></img>
+                            </td>
+                            <td>
+                                <br> <span class='thin'>{{this.name}}</span>
+                                <br> <br> <span class='thin small'> {{this.description}}<br><br></span>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class='price'>${{this.price}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <div class='line'></div>
+                {{/each}}
+                {{/if}}
+
+                {{#if productDetails}}
+
+                <table class='order-table'>
+                    <tbody>
+                        <tr>
+                            <td><img src="/product-images/{{productDetails._id}}.jpg" class='full-width'></img>
+                            </td>
+                            <td>
+                                <br> <span class='thin'>{{productDetails.name}}</span>
+                                <br> <br> <span class='thin small'> {{productDetails.description}}<br><br></span>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class='price'>${{productDetails.price}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <div class='line'></div>
+
+
+                {{/if}}
+
+                <div class='total'>
+                    <span style='float:left;'>
+                        <div class='thin dense'>Tax</div>
+                        TOTAL
+                    </span>
+                    <span style='float:right; text-align:right;'>
+                        <div class='thin dense'>
+                            <p id="total">${{totalValue}}</p>
+                        </div>
+                        ${{totalValue}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='credit-info'>
+
+            <form id="checkout-form" action="" method="">
+                <div class='credit-info-content'>
+                    <h1
+                        style="padding-top: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;padding-bottom: 20px;">
+                        Billing address</h1>
+
+                    *Email for order confirmation
+                    <input class='input-field' name="email" required></input>
+                    {{#if cart}}
+                    {{#each cart}}
+                    <input class="input-fi" id="cartItems" value="{{this.name}}" hidden>
+                    {{/each}}
+                    {{/if}}
+
+                    {{#if productDetails}}
+                    <input class="input-fi" id="cartItems" value="{{productDetails.name}}" hidden>
+                    {{/if}}
+
+                    <table class='half-input-table'>
+                        <tr>
+                            <td> *First name
+                                <input class='input-field' name="firstname" required></input>
+                            </td>
+                            <td> *Last name
+                                <input class='input-field' name="lastname" required></input>
+                            </td>
+                        </tr>
+                    </table>
+                    *Address
+                    <input class='input-field' name="address" required></input>
+
+                    *City
+                    <input class='input-field' name="city" required></input>
+
+                    <table class='half-input-table'>
+                        <tr>
+                            <td> *Country
+                                <input class='input-field' name="country" required></input>
+                            </td>
+                            <td> *Region
+                                <input class='input-field' name="region" required></input>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class='half-input-table'>
+                        <tr>
+                            <td> *Zip / Postal code
+                                <input class='input-field' name="pincode" required></input>
+                            </td>
+                            <td> *Phone
+                                <input class='input-field' name="phonenumber" required></input>
+                            </td>
+                        </tr>
+                    </table>
+                    <input name="totalValue" type="text" value={{totalValue}} hidden>
+                    <button type="submit" class='pay-btn'>Checkout</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- footer start -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                   <div class="full">
+                      <div class="logo_footer">
+                        <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
+                      </div>
+                      <div class="information_f">
+                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
+                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
+                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                      </div>
+                   </div>
+               </div>
+               <div class="col-md-8">
+                  <div class="row">
+                  <div class="col-md-7">
+                     <div class="row">
+                        <div class="col-md-6">
+                     <div class="widget_menu">
+                        <h3>Menu</h3>
+                        <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Testimonial</a></li>
+                           <li><a href="#">Blog</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="widget_menu">
+                        <h3>Account</h3>
+                        <ul>
+                           <li><a href="#">Account</a></li>
+                           <li><a href="#">Checkout</a></li>
+                           <li><a href="#">Login</a></li>
+                           <li><a href="#">Register</a></li>
+                           <li><a href="#">Shopping</a></li>
+                           <li><a href="#">Widget</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                     </div>
+                  </div>     
+                  <div class="col-md-5">
+                     <div class="widget_menu">
+                        <h3>Newsletter</h3>
+                        <div class="information_f">
+                          <p>Subscribe by our newsletter and get update protidin.</p>
+                        </div>
+                        <div class="form_sub">
+                           <form>
+                              <fieldset>
+                                 <div class="field">
+                                    <input type="email" placeholder="Enter Your Mail" name="email" />
+                                    <input type="submit" value="Subscribe" />
+                                 </div>
+                              </fieldset>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- footer end -->
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+
+    console.log("haii")
+    let productIds = [];
+    const singleProductName = document.querySelectorAll("#cartI").value;
+    const inputElements = document.querySelectorAll("#cartItems");
+    for (let i = 0; i < inputElements.length; i++) {
+        const productId = inputElements[i].value;
+        productIds.push(productId);
+    }
+    console.log(singleProductName);
+    console.log("productIds is  ", productIds)
+    $('#checkout-form').submit((e) => {
+        e.preventDefault()
+        console.log('ajax calling')
+        const data = {
+            formData: $('#checkout-form').serialize(),
+            productIds: productIds
+        };
+        $.ajax({
+            url: '/place-order',
+            method: 'post',
+            data: data,
+            success: (response) => {
+                console.log(response.response)
+                console.log('bosudukki')
+                if (response.razorSuccess) {
+                    console.log('razorpay coming')
+                    razorpayPayment(response.response)
+                }
+            }
+        })
+    })
+
+    function razorpayPayment(order) {
+        console.log('jkbkdh')
+        console.log(order)
+        var options = {
+            "key": "rzp_test_vOWB4Hpqe9fSat", // Enter the Key ID generated from the Dashboard
+            "amount": order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "F4FASHION",
+            "description": "Test Transaction",
+            "image": "",
+            "order_id": order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response) {
+                verifyPayment(response, order)
+            },
+            "prefill": {
+                "name": "F4FASHION",
+                "email": "unni@gmail.com",
+                "contact": "7356373621"
+            },
+            "notes": {
+                "address": "F4FASHION kollam"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    }
+
+
+    function verifyPayment(response, order) {
+        console.log(response)
+        var paymentId = response.razorpay_payment_id;
+        var orderId = response.razorpay_order_id;
+        var signature = response.razorpay_signature;
+
+
+        // Send an AJAX request to your server to verify the payment
+        $.ajax({
+            url: '/verify_payment',
+            type: 'POST',
+            data: {
+                payment_id: paymentId,
+                order_id: orderId,
+                signature: signature,
+                amount: order.amount
+            },
+            success: function (response) {
+                if (response === 'success') {
+                    location.href = '/order-success'
+                } else {
+                    location.href = '/order-failed'
+                    console.log('Payment failed!');
+                }
+            }
+
+        });
+    }
+
+</script>
